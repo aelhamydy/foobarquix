@@ -63,7 +63,7 @@ public class FooBarQuixBatchConfig extends DefaultBatchConfiguration{
     public FlatFileItemWriter<String> writer() {
         return new FlatFileItemWriterBuilder<String>()
                 .name("resultItemWriter")
-                .resource(new FileSystemResource("target/output.txt"))
+                .resource(new FileSystemResource("output/output.txt"))
                 .lineAggregator(new PassThroughLineAggregator<>())
                 .build();
     }
